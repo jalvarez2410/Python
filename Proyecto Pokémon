@@ -1,0 +1,35 @@
+#Carga la librería para la aleatorización
+import random
+
+#Se crea una función que contenga la jugada del individuo y de la máquina
+def jugar():
+  opciones= ["Squirtle", "Charmander", "Bulbasaur"]
+  jugada_pc= random.choice(opciones)
+  jugada_jugador= input("Elige: ")
+  print("El Pc eligió: ", jugada_pc)
+
+#En el caso de que el jugador escoge a "Squitle" se indican las distintas opciones
+  if jugada_jugador == jugada_pc:
+    print("Empate")
+  elif jugada_jugador == "Squirtle":
+    if jugada_pc == "Bulbasaur":
+      print("¡Perdiste!")
+    else:
+      print("¡Ganaste!")
+
+#En el caso de que el jugador escoge a "Charmander" se indican las distintas opciones
+  elif jugada_jugador == "Charmander":
+    if jugada_pc == "Squirtle":
+      print("¡Perdiste!")
+    else:
+      print("¡Ganaste!")
+
+#En el caso de que el jugador escoge a "Bulbasaur" se indican las distintas opciones
+  elif jugada_jugador == "Bulbasaur":
+    if jugada_pc == "Charmander":
+      print("¡Perdiste!")
+    else:
+      print("¡Ganaste!")
+
+#Se activa la función
+jugar()
